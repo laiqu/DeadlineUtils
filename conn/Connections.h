@@ -47,7 +47,9 @@ bool precommand(Connection& conn) {
     std::string msg;
     conn >> msg;
     if (msg != "OK") {
-        std::cerr << "Precommand fail: " << msg;
+        std::string rest;
+        std::getline(conn, rest);
+        std::cerr << "Precommand fail: " << msg << rest << std::endl;
         return false;
     }
     return true;

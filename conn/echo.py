@@ -26,5 +26,5 @@ while 1:
     client.send("OK\n")
     data = client.recv(size) 
     print data
-    client.send("OK\n")
+    client.send("ERROR NIGGA NIGGA NIGGA\n")
     client.close()
